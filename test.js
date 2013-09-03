@@ -1,4 +1,6 @@
 /* This is simply the code I used to do some testing of different ways to intersect */
+require('./index.js');
+
 
 var runs = 100000;
 
@@ -38,6 +40,20 @@ console.timeEnd('intersectDestructive');
 console.log(res3);
 console.log(testArray1);
 console.log(testArray2);
+
+
+var res4 = null;
+var testArray1 = ['testVal1', 'testVal2', 'testVal3', 'testVal4', 'testVal5', 'testVal6'];
+var testArray2 = ['valTest1', 'valTest2', 'valTest3', 'valTest4', 'testVal5', 'valTest5', 'valTest6', 'valTest7'];
+console.time('intersect');
+for(var i4=0 ; i4 < runs ; i4++) {
+  res4 = testArray1.intersect(testArray2);
+}
+console.timeEnd('intersect');
+console.log(res4);
+console.log(testArray1);
+console.log(testArray2);
+
 
 
 function getIntersect(arr1, arr2) {

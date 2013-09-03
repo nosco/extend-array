@@ -7,8 +7,8 @@
  * The additions make sure the arrays are sorted, but makes the code slower.
  * In return the original arrays doesn't get changed (sorted).
  */
-Array.prototype.intersect = function(arr1, arr2) {
-  var ai = 0, bi = 0, result = new Array(), a = arr1.slice(0).sort(), b = arr2.slice(0).sort();
+Array.prototype.intersect = function(arr) {
+  var ai = 0, bi = 0, result = new Array(), a = this.slice(0).sort(), b = arr.slice(0).sort();
   while(ai < a.length && bi < b.length) {
     if(a[ai] < b[bi]) {
       ai++;
