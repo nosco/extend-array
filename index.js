@@ -7,20 +7,25 @@
  * The additions make sure the arrays are sorted, but makes the code slower.
  * In return the original arrays doesn't get changed (sorted).
  */
+
 Array.prototype.intersect = function(arr) {
-  var ai = 0, bi = 0, result = new Array(), a = this.slice(0).sort(), b = arr.slice(0).sort();
-  while(ai < a.length && bi < b.length) {
-    if(a[ai] < b[bi]) {
-      ai++;
-    } else if(a[ai] > b[bi]) {
-      bi++;
-    } else {
-      result.push(a[ai]);
-      ai++; bi++;
+  // The last check here, is a check for a bug spotted, when running a large node.js App
+  // Exact problem not located, but these checks ensures that there isn't an error thrown
+  if( (arguments.length === 1) && (this.toString() != '[object global]') ) {
+    var ai = 0, bi = 0, result = new Array(), a = this.slice(0).sort(), b = arr.slice(0).sort();
+    while(ai < a.length && bi < b.length) {
+      if(a[ai] < b[bi]) {
+        ai++;
+      } else if(a[ai] > b[bi]) {
+        bi++;
+      } else {
+        result.push(a[ai]);
+        ai++; bi++;
+      }
     }
+    return result;
   }
-  return result;
-}
+};
 
 
 

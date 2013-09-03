@@ -1,6 +1,6 @@
 {
   "name": "extend-array",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "description": "Extend (prototype) the Array object with new features - currently only intersect...",
   "keywords":[
     "extend",
