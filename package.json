@@ -1,0 +1,29 @@
+{
+  "name": "extend-array",
+  "version": "0.0.2",
+  "description": "Extend (prototype) the Array object with new features - currently only intersect...",
+  "keywords":[
+    "extend",
+    "array",
+    "intersect"
+  ],
+  "author": "Dan Larsen",
+  "maintainers": [{
+    "name": "Dan Larsen",
+    "email": "dan@techba.se",
+    "url": "http://github.com/morphar"
+  }],
+  "repository": {
+    "type": "git",
+    "url": "http://github.com/nosco/extend-array.git"
+  },
+  "github": "http://github.com/nosco/extend-array",
+  "bugs": {
+    "url": "http://github.com/nosco/extend-array/issues"
+  },
+  "license": "MIT",
+  "main": "./index.js",
+  "engines": {
+    "node": ">=0.8.0"
+  }
+}
