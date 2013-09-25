@@ -1,3 +1,5 @@
+[![NPM version](https://badge.fury.io/js/block-scope.png)](http://badge.fury.io/js/extend-array)
+
 # extend-array
 
 Extend (prototype) the Array object with new features - currently only intersect...
