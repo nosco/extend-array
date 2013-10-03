@@ -26,6 +26,7 @@ Array.prototype.intersect = function(arr) {
     return result;
   }
 };
+Object.defineProperty(Array.prototype, 'intersect', { enumerable: false });
 
 
 
